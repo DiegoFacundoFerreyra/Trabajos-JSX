@@ -1,0 +1,15 @@
+.nav-container {
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  height: 60px;
+}
+
+.anchors {
+  text-decoration: none;
+  color: rgb(57, 238, 57);
+  font-size: 40px;
+  cursor: pointer;
+}
