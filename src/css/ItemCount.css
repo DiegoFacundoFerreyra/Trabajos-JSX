@@ -1,0 +1,26 @@
+.item-count {
+  width: 100px;
+  height: 48px;
+}
+
+.btnmas {
+  background-color: green;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+.btnres {
+  background-color: red;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+.btnnum {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
