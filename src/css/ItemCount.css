@@ -5,6 +5,7 @@
 
 .btnmas {
   background-color: green;
+  color: white;
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -13,6 +14,7 @@
 
 .btnres {
   background-color: red;
+  color: white;
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -23,4 +25,12 @@
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
+}
+
+.btnadd {
+  margin-top: 4px;
+  width: 80%;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(140, 241, 140);
 }
