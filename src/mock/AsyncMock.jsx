@@ -79,3 +79,13 @@
     img: "../public/productos/gym.png",
   },
 ];
+
+export const getProducts = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      setTimeout(() => {
+        resolve(products);
+      }, 2000);
+    });
+  });
+};
