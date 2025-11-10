@@ -1,4 +1,4 @@
-[
+export const products = [
   {
     id: 1,
     name: "Antiparras",
@@ -53,7 +53,7 @@
     id: 6,
     name: "Gorra natacion",
     description: "Gorra para natacion de silicona",
-    category: "acuaticos",
+    category: "Agitcuaticos",
     stock: 15,
     price: 2500,
     img: "../public/productos/gorras.png",
@@ -83,9 +83,7 @@
 export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    });
+      resolve(products);
+    }, 2000);
   });
 };
