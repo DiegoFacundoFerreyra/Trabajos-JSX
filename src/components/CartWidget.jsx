@@ -9,7 +9,7 @@ const CartWidget = (props) => {
       <span>
         <a href="">
           <img
-            src="./public/carrito.png"
+            src="./carrito.png"
             alt="carrito"
             style={{ width: "40px", height: "40px" }}
           />

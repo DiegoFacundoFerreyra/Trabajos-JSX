@@ -6,7 +6,7 @@ export const products = [
     category: "Acuaticos",
     stock: 15,
     price: 25000,
-    img: "../public/productos/antiparras.png",
+    img: "./productos/antiparras.png",
   },
 
   {
@@ -16,7 +16,7 @@ export const products = [
     category: "Mas populares",
     stock: 15,
     price: 80000,
-    img: "../public/productos/basquet.png",
+    img: "./productos/basquet.png",
   },
 
   {
@@ -26,7 +26,7 @@ export const products = [
     category: "Gimnasia",
     stock: 15,
     price: 20000,
-    img: "../public/productos/colchoneta.png",
+    img: "./productos/colchoneta.png",
   },
 
   {
@@ -36,7 +36,7 @@ export const products = [
     category: "Artes marciales",
     stock: 15,
     price: 88000,
-    img: "../public/productos/dobok.png",
+    img: "./productos/dobok.png",
   },
 
   {
@@ -46,7 +46,7 @@ export const products = [
     category: "Mas populares",
     stock: 15,
     price: 110000,
-    img: "../public/productos/futbol.png",
+    img: "./productos/futbol.png",
   },
 
   {
@@ -56,7 +56,7 @@ export const products = [
     category: "Agitcuaticos",
     stock: 15,
     price: 2500,
-    img: "../public/productos/gorras.png",
+    img: "./productos/gorras.png",
   },
 
   {
@@ -66,7 +66,7 @@ export const products = [
     category: "Artes marciales",
     stock: 15,
     price: 35000,
-    img: "../public/productos/guantes.png",
+    img: "./productos/guantes.png",
   },
 
   {
@@ -76,7 +76,7 @@ export const products = [
     category: "Gimnasia",
     stock: 15,
     price: 40000,
-    img: "../public/productos/gym.png",
+    img: "./productos/gym.png",
   },
 ];
 
