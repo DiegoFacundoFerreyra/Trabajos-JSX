@@ -4,13 +4,15 @@ import Swal from "sweetalert2";
 import { FaBeer } from "react-icons/fa";
 import "./App.css";
 import ItemCount from "./components/ItemCount";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 function App() {
   return (
     <>
       <Navbar />
       <ItemListContainer mensaje={"Bienvenidos a la tienda de deportes"} />
-      <ItemCount stock={99} />
+      <ItemCount stock={15} />
+      <ItemDetailContainer />
     </>
   );
 }

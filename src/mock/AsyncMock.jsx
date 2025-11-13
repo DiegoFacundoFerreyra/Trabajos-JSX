@@ -32,7 +32,8 @@ export const products = [
   {
     id: 4,
     name: "Dobok",
-    description: "Dobok para Tae kwon-do de cintos de color",
+    description:
+      " Dobok para Tae kwondo-do ITF para cinto de color, ya que no trae las bandas negras. Estampado y con algodon fino. Incluye el cinto blanco.",
     category: "Artes marciales",
     stock: 15,
     price: 88000,
@@ -80,10 +81,24 @@ export const products = [
   },
 ];
 
+let error = false;
 export const getProducts = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (error) {
+        reject("Hubo un error, intente mas tarde");
+      } else {
+        resolve(products);
+      }
+    }, 2000);
+  });
+};
+
+export const getOneProduct = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products);
-    }, 2000);
+      let product = products.find((item) => item.id === id);
+      resolve(product);
+    }, 3000);
   });
 };
