@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer mensaje={"Bienvenidos a la tienda de deportes"} />
-      <ItemCount stock={15} />
+      {/*    <ItemListContainer mensaje={"Bienvenidos a la tienda de deportes"} />
+      <ItemCount stock={15} /> */}
       <ItemDetailContainer />
     </>
   );

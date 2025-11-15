@@ -6,7 +6,7 @@ export const products = [
     category: "Acuaticos",
     stock: 15,
     price: 25000,
-    img: "./productos/antiparras.png",
+    img: "/productos/antiparras.png",
   },
 
   {
@@ -16,7 +16,7 @@ export const products = [
     category: "Mas populares",
     stock: 15,
     price: 80000,
-    img: "./productos/basquet.png",
+    img: "/productos/basquet.png",
   },
 
   {
@@ -26,7 +26,7 @@ export const products = [
     category: "Gimnasia",
     stock: 15,
     price: 20000,
-    img: "./productos/colchoneta.png",
+    img: "/productos/colchoneta.png",
   },
 
   {
@@ -37,7 +37,7 @@ export const products = [
     category: "Artes marciales",
     stock: 15,
     price: 88000,
-    img: "./productos/dobok.png",
+    img: "/productos/dobok.png",
   },
 
   {
@@ -47,7 +47,7 @@ export const products = [
     category: "Mas populares",
     stock: 15,
     price: 110000,
-    img: "./productos/futbol.png",
+    img: "/productos/futbol.png",
   },
 
   {
@@ -57,7 +57,7 @@ export const products = [
     category: "Agitcuaticos",
     stock: 15,
     price: 2500,
-    img: "./productos/gorras.png",
+    img: "/productos/gorras.png",
   },
 
   {
@@ -67,7 +67,7 @@ export const products = [
     category: "Artes marciales",
     stock: 15,
     price: 35000,
-    img: "./productos/guantes.png",
+    img: "/productos/guantes.png",
   },
 
   {
@@ -77,7 +77,7 @@ export const products = [
     category: "Gimnasia",
     stock: 15,
     price: 40000,
-    img: "./productos/gym.png",
+    img: "/productos/gym.png",
   },
 ];
 
@@ -97,7 +97,7 @@ export const getProducts = () => {
 export const getOneProduct = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      let product = products.find((item) => item.id === id);
+      let product = products.find((item) => item.id === Number(id));
       resolve(product);
     }, 3000);
   });
