@@ -9,6 +9,7 @@ const ItemDetail = ({ detalle }) => {
       <span className="card-item-title">${detalle.price}</span>
       <p className="card-item-title">{detalle.description}</p>
       <p className="card-item-title">
+        <button>Agregar al carrito</button>
         Stock disponible: {detalle.stock} unidades{" "}
       </p>
     </div>

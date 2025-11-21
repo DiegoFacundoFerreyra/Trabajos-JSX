@@ -1,5 +1,5 @@
-import React from "react";
 import "../css/ItemList.css";
+import { Link } from "react-router-dom";
 
 const Item = ({ prod }) => {
   return (
@@ -7,7 +7,9 @@ const Item = ({ prod }) => {
       <img src={prod.img} alt={prod.name} className="card-item-img" />
       <h3 className="card-item-title">{prod.name}</h3>
       <p className="card-item-price">${prod.price}</p>
-      <button className="card-item-btn">Agregar al carrito</button>
+      <Link className="card-item-btn" to={`/item/${prod.id}`}>
+        Ver detalle
+      </Link>
     </div>
   );
 };

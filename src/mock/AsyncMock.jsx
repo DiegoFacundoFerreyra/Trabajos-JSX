@@ -2,7 +2,8 @@ export const products = [
   {
     id: 1,
     name: "Antiparras",
-    description: "Antiparras deportivas de alta calidad",
+    description:
+      "Antiparras deportivas de alta calidad. Son profesionales y vienen de varios colores.",
     category: "Acuaticos",
     stock: 15,
     price: 25000,
@@ -12,7 +13,8 @@ export const products = [
   {
     id: 2,
     name: "Basquet",
-    description: "Pelota de basquet profesional",
+    description:
+      "Pelota de basquet profesional de primera marca con detalles en color.",
     category: "Mas populares",
     stock: 15,
     price: 80000,
@@ -22,7 +24,8 @@ export const products = [
   {
     id: 3,
     name: "Colchoneta",
-    description: "Colchoneta para yoga, pilates y abdominales",
+    description:
+      "Colchoneta para yoga, pilates y abdominales. Son de espuma de 4cm de alto con lona lisa.",
     category: "Gimnasia",
     stock: 15,
     price: 20000,
@@ -43,7 +46,8 @@ export const products = [
   {
     id: 5,
     name: "Pelota de futbol",
-    description: "Pelota oficial de la AFA",
+    description:
+      "Pelota oficial de la AFA. Es la profesional de cancha de 11 con la que se juega el torneo de la liga del 2025.",
     category: "Mas populares",
     stock: 15,
     price: 110000,
@@ -53,7 +57,8 @@ export const products = [
   {
     id: 6,
     name: "Gorra natacion",
-    description: "Gorra para natacion de silicona",
+    description:
+      "Gorra para natacion de silicona. Perfectamente ajustable a tu medida y viene de varios colores.",
     category: "Agitcuaticos",
     stock: 15,
     price: 2500,
@@ -63,7 +68,8 @@ export const products = [
   {
     id: 7,
     name: "Guantes boxeo",
-    description: "Guantes profesionales para boxeo",
+    description:
+      "Guantes profesionales para boxeo de primera marca. Vienen de varios talles para que estes bien comodo.",
     category: "Artes marciales",
     stock: 15,
     price: 35000,
@@ -73,7 +79,8 @@ export const products = [
   {
     id: 8,
     name: "Kit gimnasia",
-    description: "Kit completo para hacer aerobics y gimnasia",
+    description:
+      "Kit completo para hacer aerobics y gimnasia. Incluye conos, aros, barras para salto y pesas para muñecas y tobillos.",
     category: "Gimnasia",
     stock: 15,
     price: 40000,
