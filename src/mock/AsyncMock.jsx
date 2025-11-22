@@ -59,7 +59,7 @@ export const products = [
     name: "Gorra natacion",
     description:
       "Gorra para natacion de silicona. Perfectamente ajustable a tu medida y viene de varios colores.",
-    category: "Agitcuaticos",
+    category: "Acuaticos",
     stock: 15,
     price: 2500,
     img: "/productos/gorras.png",
