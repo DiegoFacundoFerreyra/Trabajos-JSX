@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/ItemList.css";
+import "../css/itemDetail.css";
 
 const ItemDetail = ({ detalle }) => {
   return (
@@ -8,10 +8,8 @@ const ItemDetail = ({ detalle }) => {
       <img src={detalle.img} alt={detalle.name} className="card-item-img" />
       <span className="card-item-title">${detalle.price}</span>
       <p className="card-item-title">{detalle.description}</p>
-      <p className="card-item-title">
-        <button>Agregar al carrito</button>
-        Stock disponible: {detalle.stock} unidades{" "}
-      </p>
+      <button>Agregar al carrito</button>
+      <small>Stock disponible: {detalle.stock} unidades </small>
     </div>
   );
 };
