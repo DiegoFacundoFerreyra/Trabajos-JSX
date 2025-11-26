@@ -20,3 +20,29 @@
   font-size: 40px;
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  .anchors,
+  .active {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .anchors,
+  .active {
+    font-size: 22px;
+  }
+}

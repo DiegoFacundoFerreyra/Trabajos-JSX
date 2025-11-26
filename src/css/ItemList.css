@@ -56,3 +56,39 @@
   padding: 20px;
   justify-items: center;
 }
+
+@media (max-width: 768px) {
+  .card-item {
+    width: 80%;
+  }
+
+  .item-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-item {
+    width: 90%;
+    padding: 12px;
+  }
+
+  .card-item-img {
+    height: 140px;
+  }
+
+  .card-item-title {
+    font-size: 16px;
+  }
+
+  .card-item-price {
+    font-size: 18px;
+  }
+
+  .item-list-container {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}
