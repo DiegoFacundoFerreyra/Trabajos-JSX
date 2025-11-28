@@ -12,7 +12,7 @@ export const products = [
 
   {
     id: 2,
-    name: "Basquet",
+    name: "Pelota de basquet",
     description:
       "Pelota de basquet profesional de primera marca con detalles en color.",
     category: "Mas populares",

@@ -14,9 +14,6 @@ button {
   cursor: pointer;
   border-radius: 8px;
 }
-button:hover {
-  background-color: greenyellow;
-}
 small {
   display: flex;
   align-items: center;

@@ -1,4 +1,4 @@
-.cart-counter {
+/* .cart-counter {
   top: 10px;
   right: 55px;
   background-color: black;
@@ -12,6 +12,20 @@
   color: white;
   font-weight: bold;
   position: absolute;
+} */
+.cart-counter {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 480px) {

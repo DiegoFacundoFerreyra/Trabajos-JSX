@@ -1,5 +1,5 @@
 import "../css/Navbar.css";
-import CartWidget from "./CartWidget";
+import CartWidgetIcons from "./CartWidgetIcons";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
@@ -7,7 +7,7 @@ const Navbar = () => {
       <NavLink to="/">
         <img
           style={{ width: "120px", height: "64px" }}
-          src="../logo.png"
+          src="/logo.png"
           alt="Logo de la marca"
         />
       </NavLink>
@@ -23,7 +23,7 @@ const Navbar = () => {
       <NavLink className="anchors" to="/category/Acuaticos">
         Acuaticos
       </NavLink>
-      <CartWidget counter={8} />
+      <CartWidgetIcons counter={8} />
     </nav>
   );
 };
