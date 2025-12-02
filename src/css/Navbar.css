@@ -21,6 +21,13 @@
   cursor: pointer;
 }
 
+.contador {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   .nav-container {
     padding: 1.5rem;

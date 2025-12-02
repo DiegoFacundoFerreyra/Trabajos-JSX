@@ -23,7 +23,9 @@ const Navbar = () => {
       <NavLink className="anchors" to="/category/Acuaticos">
         Acuaticos
       </NavLink>
-      <CartWidgetIcons counter={8} />
+      <NavLink className="contador" to="/cart">
+        <CartWidgetIcons />
+      </NavLink>
     </nav>
   );
 };

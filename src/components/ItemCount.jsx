@@ -1,23 +1,21 @@
 import "../css/ItemCount.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, onAdd }) => {
   const [count, setCount] = useState(1);
-
-  //Ejemplo de useEffect por ende el onClick del agregar al carrito tambien lo es
-  const [compra, setCompra] = useState(false);
-  useEffect(() => {}, [compra]);
 
   const sumar = () => {
     if (count < stock) {
       setCount(count + 1);
     }
   };
+
   const restar = () => {
     if (count > 1) {
       setCount(count - 1);
     }
   };
+
   return (
     <div className="item-count">
       <button className="btnres" onClick={restar}>
@@ -27,7 +25,12 @@ const ItemCount = ({ stock }) => {
       <button className="btnmas" onClick={sumar}>
         +
       </button>
-      <button className="btnadd" onClick={() => setCompra(!compra)}>
+
+      <button
+        className="btnadd"
+        disabled={stock === 0}
+        onClick={() => onAdd(count)}
+      >
         Agregar al carrito
       </button>
     </div>

@@ -2,24 +2,24 @@ import { TiShoppingCart } from "react-icons/ti";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
-/* const CartWidgetIcons = ({ counter }) => {
-  const carrito = useContext(CartContext);
+const CartWidgetIcons = () => {
+  const { cart } = useContext(CartContext);
 
-  return (
-    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-      <TiShoppingCart fontSize="1.8rem" />
-      <span className="cart-counter">{counter}</span>
-    </div>
+  const totalCantidad = cart.reduce(
+    (acc, product) => acc + product.quantity,
+    0
   );
-}; */
 
-const CartWidgetIcons = ({ counter }) => {
-  const carrito = useContext(CartContext);
   return (
-    <div style={{ position: "relative" }}>
-      <TiShoppingCart fontSize="1.8rem" />
-      <span className="cart-counter">{counter}</span>
+    <div
+      style={{ position: "relative", textDecoration: "none", color: "black" }}
+    >
+      <TiShoppingCart fontSize="2rem" />
+      {totalCantidad > 0 && (
+        <span className="cart-counter">{totalCantidad}</span>
+      )}
     </div>
   );
 };
+
 export default CartWidgetIcons;
