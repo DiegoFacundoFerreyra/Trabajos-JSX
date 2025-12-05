@@ -4,20 +4,39 @@ import { getProducts, products } from "../mock/AsyncMock";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 
-import LoaderComponent from "./LoaderComponent";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import LoaderComponents from "./LoaderComponents";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../service/firebase";
 
 const ItemListContainer = ({ mensaje }) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const { type } = useParams();
 
   //FIREBASE
 
+  useEffect(() => {
+    setLoading(true);
+    const productsCollection = type
+      ? query(collection(db, "items"), where("category", "==", type))
+      : collection(db, "items");
+    getDocs(productsCollection)
+      .then((res) => {
+        console.log(res);
+        console.log(res.docs);
+        const list = res.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
+        });
+        setData(list);
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
+  }, [type]);
+
   return (
     <>
       {loading ? (
-        <LoaderComponent
+        <LoaderComponents
           text={
             type ? `Cargando categoria ${type}...` : "Cargando Productos..."
           }
