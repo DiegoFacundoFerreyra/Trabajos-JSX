@@ -33,6 +33,11 @@ const ItemListContainer = ({ mensaje }) => {
       .finally(() => setLoading(false));
   }, [type]);
 
+  /*  const subirData = () => {
+    console.log("Subiendo data...");
+    const collSubir = collection(db, "items");
+    products.map((prod) => addDoc(collSubir, prod));
+  }; */
   return (
     <>
       {loading ? (
@@ -44,19 +49,20 @@ const ItemListContainer = ({ mensaje }) => {
       ) : (
         <div>
           {/* DESPUES SE BORRA!!!!!! */}
-          {/* <button onClick={subirData}>SUBIR DATA</button> */}
-          <h1 className="text-success">
+          {/*  {<button onClick={subirData}>SUBIR DATA</button>} */}
+          <h2 className="text-success">
             {mensaje}{" "}
             {type && (
-              <span style={{ textTransform: "capitalize", color: "red" }}>
+              <span style={{ textTransform: "capitalize", color: "green" }}>
                 {type}
               </span>
             )}
-          </h1>
-          {/* <Input/> */}
+          </h2>
+          {/* {<Input />} */}
           <ItemList data={data} />
         </div>
       )}
+      ;
     </>
   );
 };

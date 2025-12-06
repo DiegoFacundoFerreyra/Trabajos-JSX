@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
-import Swal from "sweetalert2";
+
 import { FaBeer } from "react-icons/fa";
 import "./App.css";
 import ItemCount from "./components/ItemCount";
@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./components/Error";
 import { CartProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
+import CheckOut from "./components/CheckOut";
 
 function App() {
   return (
@@ -26,8 +27,9 @@ function App() {
           />
           <Route path="/category/:type" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="*" element={<Error />} />
           <Route path="/cart" element={<CartContainer />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </CartProvider>
     </BrowserRouter>

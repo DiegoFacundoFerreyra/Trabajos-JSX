@@ -12,7 +12,7 @@ const LoaderComponent = ({ text }) => {
         flexDirection: "column",
       }}
     >
-      <Spinner animation="grow" variant="info" />
+      {/* <Spinner animation="grow" variant="info" /> */}
       <p className="mt-2">{text}</p>
     </div>
   );
