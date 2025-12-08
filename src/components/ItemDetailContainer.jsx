@@ -8,6 +8,8 @@ import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [detalle, setDetalle] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [invalid, setInvalid] = useState(null);
   const { id } = useParams();
   useEffect(() => {
     const docRef = doc(db, "items", id);
@@ -22,8 +24,24 @@ const ItemDetailContainer = () => {
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, []);
+  if (invalid) {
+    return (
+      <div>
+        <h2 style={{ color: "red" }}>El producto no existe</h2>
+        <Link to="/">Volver al inicio</Link>
+      </div>
+    );
+  }
 
-  return <ItemDetail detalle={detalle} />;
+  return (
+    <>
+      {loading ? (
+        <LoaderComponent text="Cargando detalle..." />
+      ) : (
+        <ItemDetail detalle={detalle} />
+      )}
+    </>
+  );
 };
 
 export default ItemDetailContainer;

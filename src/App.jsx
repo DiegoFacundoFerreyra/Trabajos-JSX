@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
-
 import { FaBeer } from "react-icons/fa";
 import "./App.css";
 import ItemCount from "./components/ItemCount";

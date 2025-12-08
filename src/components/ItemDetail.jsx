@@ -1,24 +1,18 @@
 import "../css/itemCount.css";
 import ItemCount from "./ItemCount";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ detalle }) => {
+  const [purchase, setPurchase] = useState(false);
   const { addItem, totalItems } = useContext(CartContext);
-  const [stockActual, setStockActual] = useState(0);
-
-  useEffect(() => {
-    if (detalle?.stock !== undefined) {
-      setStockActual(detalle.stock - totalItems(detalle.id));
-    }
-  }, [detalle, totalItems]);
-
   const onAdd = (cantidad) => {
     addItem(detalle, cantidad);
+    setPurchase(true);
   };
 
-  if (!detalle?.id) return <p>Cargando producto...</p>;
-
+  const stockActual = detalle.stock - totalItems(detalle.id);
   return (
     <div className="muestraDetalle">
       <div className="card-item">

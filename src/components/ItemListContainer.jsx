@@ -33,11 +33,6 @@ const ItemListContainer = ({ mensaje }) => {
       .finally(() => setLoading(false));
   }, [type]);
 
-  /*  const subirData = () => {
-    console.log("Subiendo data...");
-    const collSubir = collection(db, "items");
-    products.map((prod) => addDoc(collSubir, prod));
-  }; */
   return (
     <>
       {loading ? (
@@ -48,8 +43,6 @@ const ItemListContainer = ({ mensaje }) => {
         />
       ) : (
         <div>
-          {/* DESPUES SE BORRA!!!!!! */}
-          {/*  {<button onClick={subirData}>SUBIR DATA</button>} */}
           <h2 className="text-success">
             {mensaje}{" "}
             {type && (
@@ -58,7 +51,6 @@ const ItemListContainer = ({ mensaje }) => {
               </span>
             )}
           </h2>
-          {/* {<Input />} */}
           <ItemList data={data} />
         </div>
       )}
