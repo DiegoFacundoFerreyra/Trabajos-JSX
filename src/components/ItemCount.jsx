@@ -1,5 +1,5 @@
 import "../css/ItemCount.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ItemCount = ({ stock, onAdd }) => {
   const [count, setCount] = useState(1);
@@ -11,29 +11,39 @@ const ItemCount = ({ stock, onAdd }) => {
   };
 
   const restar = () => {
-    if (count > 1) {
+    if (count > 0) {
       setCount(count - 1);
     }
   };
 
-  return (
-    <div className="item-count">
-      <button className="btnres" onClick={restar}>
-        -
-      </button>
-      <span className="btnnum">{count}</span>
-      <button className="btnmas" onClick={sumar}>
-        +
-      </button>
+  const comprar = () => {
+    onAdd(count);
+  };
 
-      <button
-        className="btnadd"
-        disabled={stock === 0}
-        onClick={() => onAdd(count)}
-      >
-        Agregar al carrito
-      </button>
-    </div>
+  return (
+    <>
+      {stock > 0 ? (
+        <div className="item-count">
+          <button className="btnres" onClick={restar}>
+            -
+          </button>
+          <span className="btnnum">{count}</span>
+          <button className="btnmas" onClick={sumar}>
+            +
+          </button>
+
+          <button
+            className="btnadd"
+            disabled={stock === 0}
+            onClick={() => onAdd(count)}
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      ) : (
+        <p>Sin stock disponible</p>
+      )}
+    </>
   );
 };
 

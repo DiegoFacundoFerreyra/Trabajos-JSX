@@ -6,9 +6,10 @@ const CartWidgetIcons = () => {
   const { cart } = useContext(CartContext);
 
   const totalCantidad = cart.reduce(
-    (acc, product) => acc + product.quantity,
+    (acc, product) => (acc += product.quantity),
     0
   );
+  //producto cantidad*producto.price
 
   return (
     <div

@@ -2,6 +2,7 @@ import "../css/Navbar.css";
 import CartWidgetIcons from "./CartWidgetIcons";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
+  const arrayList = [{ name: "random" }];
   return (
     <nav className="nav-container">
       <NavLink to="/">
@@ -24,7 +25,7 @@ const Navbar = () => {
         Acuaticos
       </NavLink>
       <NavLink className="contador" to="/cart">
-        <CartWidgetIcons />
+        <CartWidgetIcons lata={arrayList} />
       </NavLink>
     </nav>
   );

@@ -25,7 +25,7 @@ const ItemListContainer = ({ mensaje }) => {
         console.log(res);
         console.log(res.docs);
         const list = res.docs.map((doc) => {
-          return { id: doc.id, ...doc.data() };
+          return { ...doc.data(), id: doc.id };
         });
         setData(list);
       })
@@ -54,7 +54,6 @@ const ItemListContainer = ({ mensaje }) => {
           <ItemList data={data} />
         </div>
       )}
-      ;
     </>
   );
 };

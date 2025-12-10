@@ -1,8 +1,6 @@
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
-import { FaBeer } from "react-icons/fa";
 import "./App.css";
-import ItemCount from "./components/ItemCount";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./components/Error";

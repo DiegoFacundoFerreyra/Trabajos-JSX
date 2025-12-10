@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
       })
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
-  }, []);
+  }, [id]);
   if (invalid) {
     return (
       <div>

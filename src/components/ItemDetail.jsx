@@ -13,6 +13,7 @@ const ItemDetail = ({ detalle }) => {
   };
 
   const stockActual = detalle.stock - totalItems(detalle.id);
+  console.log(detalle);
   return (
     <div className="muestraDetalle">
       <div className="card-item">
@@ -20,8 +21,14 @@ const ItemDetail = ({ detalle }) => {
         <img src={detalle.img} alt={detalle.name} className="card-item-img" />
         <span>${detalle.price}</span>
         <p>{detalle.description}</p>
-        <ItemCount stock={stockActual} onAdd={onAdd} />
         <small>Stock disponible: {stockActual} unidades</small>
+        {purchase ? (
+          <Link to="/cart" className="btn btn-success mt-3">
+            Ir al carrito
+          </Link>
+        ) : (
+          <ItemCount stock={stockActual} onAdd={onAdd} />
+        )}
       </div>
     </div>
   );

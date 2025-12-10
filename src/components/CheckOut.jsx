@@ -11,7 +11,7 @@ const CheckOut = () => {
   const [buyer, setBuyer] = useState({});
   const [validMail, setValidMail] = useState("");
   const [orderID, setOrderID] = useState(null);
-  const { cart, clear } = useContext(CartContext);
+  const { cart, clearCart } = useContext(CartContext);
   const [process, setProcess] = useState(false);
   const buyerData = (e) => {
     setBuyer({
@@ -32,7 +32,7 @@ const CheckOut = () => {
     addDoc(ventas, orden)
       .then((res) => {
         setOrderID(res.id);
-        clear();
+        clearCart();
       })
       .catch((error) => console.log(error))
       .finally(() => setProcess(false));
@@ -54,24 +54,28 @@ const CheckOut = () => {
           <h3>Complete sus datos</h3>
           <form className="p-4" onSubmit={finalizarCompra}>
             <input
+              name="name"
               type="text"
               placeholder="Nombre"
               required
               onChange={buyerData}
             />
             <input
+              name="surname"
               type="text"
               placeholder="Apellido"
               required
               onChange={buyerData}
             />
             <input
+              name="email"
               type="email"
               placeholder="Email"
               required
               onChange={buyerData}
             />
             <input
+              name="email2"
               type="email2"
               placeholder="Confirme su Email"
               required
