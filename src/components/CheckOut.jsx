@@ -29,11 +29,16 @@ const CheckOut = () => {
       Fecha: serverTimestamp(),
     };
     const ventas = collection(db, "orders");
-    addDoc(ventas, orden)
-      .then((res) => {
-        setOrderID(res.id);
-        clearCart();
-      })
+    addDoc(ventas, orden).then((res) => {
+      setOrderID(res.id);
+      clearCart();
+    });
+    Swal.fire({
+      icon: "success",
+      title: "¡Gracias por tu compra! 🛍️",
+      text: "Tu pedido ha sido procesado correctamente.",
+      confirmButtonColor: "#28a745",
+    })
       .catch((error) => console.log(error))
       .finally(() => setProcess(false));
   };
@@ -91,12 +96,5 @@ const CheckOut = () => {
     </>
   );
 };
-
-Swal.fire({
-  icon: "success",
-  title: "¡Gracias por tu compra! 🛍️",
-  text: "Tu pedido ha sido procesado correctamente.",
-  confirmButtonColor: "#28a745",
-});
 
 export default CheckOut;

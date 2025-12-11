@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import "../css/CartView.css";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const CartView = () => {
   const { cart, montoTotal, removeItem, clearCart } = useContext(CartContext);
@@ -20,7 +21,7 @@ const CartView = () => {
           </div>
         ))}
       </div>
-      <span>Total a pagar: ${} </span>
+      <span>Total a pagar: ${montoTotal()} </span>
       <div>
         <button onClick={clearCart}>Vaciar carrito</button>
         <button>
