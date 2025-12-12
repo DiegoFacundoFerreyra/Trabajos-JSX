@@ -1,16 +1,24 @@
-# React + Vite
+# Tienda de deportes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el proyecto de Diego Ferreyra y es lo mejor que pude hacer hasta aca.
 
-Currently, two official plugins are available:
+![AppDeportes](/public/logo.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalacion
 
-## React Compiler
+_Requisito tecnico: Tener instalado node.js v20 o mayor._
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clonar repositorio desde github.
+2. Ingresar comando `cd Trabajo-JSX` para moverse a la carpeta raiz.
+3. Instalar las dependencias con el comando `npm install`.
+4. Para levantar el proyecto de manera local ejecute el comando `npm run dev`.
 
-## Expanding the ESLint configuration
+### Version host
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Si desea ver el proyecto online, puede ingresar desde el siguiente link: [AppDeportes](https://trabajos-jsx.vercel.app)
+
+#### Librerias utilizadas
+
+-[Firebase](https://console.firebase.google.com/u/0/project/primer-trabajo-practico-diego/): Para base de datos. -[React Router Dom]: Para la navegacion por rutas. -[Sweet Alert 2]: Para darle el toque final.
+
+Desarrollado por Diego.

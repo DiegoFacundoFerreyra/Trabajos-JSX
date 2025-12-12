@@ -3,22 +3,14 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartWidgetIcons = () => {
-  const { cart } = useContext(CartContext);
-
-  const totalCantidad = cart.reduce(
-    (acc, product) => (acc += product.quantity),
-    0
-  );
-  //producto cantidad*producto.price
+  const { totalCantidad, cart } = useContext(CartContext);
 
   return (
     <div
       style={{ position: "relative", textDecoration: "none", color: "black" }}
     >
       <TiShoppingCart fontSize="2rem" />
-      {totalCantidad > 0 && (
-        <span className="cart-counter">{totalCantidad}</span>
-      )}
+      {cart.length > 0 && <span className="cart-counter">{totalCantidad}</span>}
     </div>
   );
 };

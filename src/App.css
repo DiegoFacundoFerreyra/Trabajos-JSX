@@ -1,0 +1,8 @@
+.img-wh {
+  width: 80px;
+  height: 80px;
+  outline: none;
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+}
