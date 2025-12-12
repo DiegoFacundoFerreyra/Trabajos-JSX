@@ -6,6 +6,28 @@ import Swal from "sweetalert2";
 
 const CartView = () => {
   const { cart, montoTotal, removeItem, clearCart } = useContext(CartContext);
+
+  const preClearCart = () => {
+    Swal.fire({
+      title: "Seguro que deseas vaciar el carrito?",
+      text: "No te va a guardar ningun producto agregado anteriormente!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      cancelButtonText: "No, cancelar!",
+      confirmButtonText: "Si, deseo eliminar el carrito!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clearCart();
+        Swal.fire({
+          title: "El carrito esta vacio!",
+          icon: "success",
+        });
+      }
+    });
+  };
+
   return (
     <div>
       <h2>Tu carrito 🛒</h2>
@@ -23,7 +45,7 @@ const CartView = () => {
       </div>
       <span>Total a pagar: ${montoTotal()} </span>
       <div>
-        <button onClick={clearCart}>Vaciar carrito</button>
+        <button onClick={preClearCart}>Vaciar carrito</button>
         <button>
           {
             <Link style={{ textDecoration: "none" }} to="/checkout">

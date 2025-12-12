@@ -19,6 +19,6 @@ Si desea ver el proyecto online, puede ingresar desde el siguiente link: [AppDep
 
 #### Librerias utilizadas
 
--[Firebase](https://console.firebase.google.com/u/0/project/primer-trabajo-practico-diego/): Para base de datos. -[React Router Dom]: Para la navegacion por rutas. -[Sweet Alert 2]: Para darle el toque final.
+-[Firebase](https://console.firebase.google.com/u/0/project/primer-trabajo-practico-diego/): Para base de datos. -[React Router Dom] Para la navegacion por rutas. -[Sweet Alert 2] Para darle el toque final.
 
 Desarrollado por Diego.
