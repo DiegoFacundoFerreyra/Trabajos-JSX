@@ -28,6 +28,15 @@
   cursor: pointer;
 }
 
+.img-wh {
+  width: 80px;
+  height: 80px;
+  outline: none;
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+}
+
 @media (max-width: 900px) {
   .nav-container {
     padding: 1.5rem;
@@ -51,5 +60,9 @@
   .anchors,
   .active {
     font-size: 22px;
+  }
+  .img-wh {
+    width: 52px;
+    height: 52px;
   }
 }

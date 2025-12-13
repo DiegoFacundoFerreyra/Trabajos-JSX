@@ -1,99 +1,105 @@
 .item-count {
-  width: 100px;
-  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  padding: 16px;
+  margin: 20px auto;
+
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-count > button,
+.item-count > span {
+  margin: 4px;
+}
+
+.btnmas,
+.btnres {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  border: none;
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btnmas {
-  background-color: green;
-  color: white;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  border: none;
+  background-color: #198754;
 }
 
 .btnres {
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  border: none;
+  background-color: #dc3545;
 }
 
 .btnnum {
-  border: none;
-  padding: 0.5rem 1rem;
+  min-width: 40px;
+  text-align: center;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .btnadd {
-  margin-top: 4px;
-  width: 80%;
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
   border: none;
+  border-radius: 8px;
+  background-color: #394bf2;
+  font-weight: bold;
   cursor: pointer;
-  background-color: rgb(140, 241, 140);
 }
 
-.muestraDetalle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
+.btnadd:hover {
+  background-color: #03178a;
+}
+
+.item-count p {
+  text-align: center;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
   .item-count {
-    width: 140px;
-    height: auto;
+    width: 200px;
+    padding: 14px;
   }
 
   .btnmas,
   .btnres {
-    width: 26px;
-    height: 26px;
-  }
-
-  .btnnum {
-    font-size: 1.3rem;
-  }
-
-  .btnadd {
-    width: 90%;
-    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .item-count {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .btnmas,
-  .btnres {
-    width: 32px;
-    height: 32px;
-    font-size: 18px;
-    border-radius: 6px;
-  }
-
-  .btnnum {
-    font-size: 1.4rem;
-    padding: 0.3rem 0.8rem;
+    width: 180px;
+    padding: 12px;
   }
 
   .btnadd {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 8px;
+    font-size: 14px;
+    padding: 8px;
   }
+}
 
-  .muestraDetalle {
-    margin-top: 12px;
-  }
+.muestraDetalle {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
