@@ -28,9 +28,6 @@ function App() {
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        <a href="https://wa.me/34168201356">
-          <img className="img-wh" src="/whatsapp.png" alt="whatsapp" />
-        </a>
       </CartProvider>
     </BrowserRouter>
   );

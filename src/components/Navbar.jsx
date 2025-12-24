@@ -26,6 +26,9 @@ const Navbar = () => {
       </NavLink>
       <NavLink className="contador" to="/cart">
         <CartWidgetIcons lata={arrayList} />
+              <a href="https://wa.me/34168201356">
+          <img className="img-wh" src="/whatsapp.png" alt="whatsapp" />
+        </a>
       </NavLink>
     </nav>
   );
